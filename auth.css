@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    background-color: #EDEFF0;
+}
+
+body img {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial;
+}
+span {
+    font-family: Montserrat;
+}
+p, h1, h2, h3, h4, img {
+    margin: 10px;
+    padding: 0;
+}
+
+.wrapper {
+    margin: auto 0;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+}
+
+.auth {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.auth-form h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #333333;
+    font-family: Montserrat, sans-serif;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555555;
+}
+
+.form input[type="text"], .form input[type="password"] {
+    width: 100%;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.checkbox label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.checkbox input {
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 14px;
+    background-color: #3a82ff;
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+.auth-form button:hover {
+    background-color: #2a62cc;
+}

@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="first_task_Kropachev_Mikhail_251-371.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <title>Первое задание</title>
+    <title>Food Construct</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
             <h1><span>Food Construct</span></h1>
             <div class="nav">
-                <a href="">О нас</a>
-                <a href="">Собрать ланч</a>
-                <a href="">Заказы</a>
-                <a href="">Контакты</a>
+                <a href="" class="def">О нас</a>
+                <a href="" class="def">Собрать ланч</a>
+                <a href="" class="def">Заказы</a>
+                <a href="" class="def">Контакты</a>
+                <a href="auth.html" class="auth">Войти</a>
             </div>
         </div>
         <div class="main">
@@ -79,6 +80,56 @@
         </div>
         <div class="footer">
             <p>Позвонить нам +7-000-000-00-00</p>
+            <section class="feedback">
+                <h2>Форма обратной связи</h2>
+                <form action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+                    <div class="form">
+                        <label for="fullname">ФИО:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    
+                    <div class="form">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form">
+                        <label>Откуда узнали о нас:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="source" value="ads" required> Реклама</label>
+                            <label><input type="radio" name="source" value="friends"> Друзья</label>
+                            <label><input type="radio" name="source" value="internet"> Интернет</label>
+                        </div>
+                    </div>
+
+                    <div class="form">
+                        <label for="requestType">Тип обращения:</label>
+                        <select id="requestType" name="request_type">
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                        </select>
+                    </div>
+
+                    <div class="form">
+                        <label for="message">Текст сообщения:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form">
+                        <label for="attachment">Вложения:</label>
+                        <input type="file" id="attachment" name="attachment">
+                    </div>
+
+                    <div class="form">
+                        <label>
+                            <input type="checkbox" name="consent" required>
+                            Даю согласие на обработку персональных данных
+                        </label>
+                    </div>
+
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
         </div>
     </div>
 </body>
