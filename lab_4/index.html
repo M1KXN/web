@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заказ напитков</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="head">
+        <div class="wrap">
+            <p class="restaurant">Ресторан «Tasty»</p>
+            <h1>Меню напитков</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="drinks">
+            <div class="wrap">
+                <h2>Выберите напиток</h2>
+                <div class="controls">
+                    <label for="sort">Сортировка:</label>
+                    <select id="sort">
+                        <option value="default">По умолчанию</option>
+                        <option value="alphabet">По алфавиту</option>
+                    </select>
+                </div>
+                <div class="grid">
+                </div>
+            </div>
+        </section>
+
+        <section class="order">
+            <div class="wrap">
+                <h2>Сделать заказ</h2>
+                <form class="form" action="#" method="POST">
+                    <div class="form-grid">
+                        <div class="col">
+                            <h3>Ваш заказ</h3>
+                            <div id="cart">
+                                <p class="empty">Ничего не выбрано</p>
+                            </div>
+                            <label for="comment">Комментарии к заказу</label>
+                            <textarea id="comment" name="comment" rows="4"></textarea>
+                        </div>
+
+                        <div class="col">
+                            <h3>Ваши данные</h3>
+                            
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <div class="check">
+                                <input type="checkbox" id="subscribe" name="subscribe">
+                                <label for="subscribe">Получить информацию о скидках и акциях</label>
+                            </div>
+
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" name="phone" pattern="\+7\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}" placeholder="+7 (999) 123-45-67" required>
+
+                            <label for="address">Адрес доставки</label>
+                            <input type="text" id="address" name="address" required>
+                            <small>Доставка осуществляется только по Москве</small>
+
+                            <label>Время доставки:</label>
+                            <div class="radio">
+                                <input type="radio" id="asap" name="delivery_time" value="asap" checked>
+                                <label for="asap">Как можно скорее</label>
+                            </div>
+                            <div class="radio">
+                                <input type="radio" id="exact" name="delivery_time" value="exact">
+                                <label for="exact">К указанному времени</label>
+                            </div>
+
+                            <label for="time">Укажите время доставки</label>
+                            <input type="time" id="time" name="time" min="07:00" max="23:00">
+                            <small>Доступное время доставки с 7:00 до 23:00</small>
+                            
+                            <input type="hidden" id="drink-input" name="drink" value="">
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button type="reset" class="btn btn-grey">Сбросить</button>
+                        <button type="submit" class="btn">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="foot">
+        <div class="wrap">
+            <p>Позвонить нам: <a href="tel:+70000000000">+7 (000) 000-00-00</a></p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
