@@ -46,7 +46,7 @@
         <section class="order">
             <div class="wrap">
                 <h2>Сделать заказ</h2>
-                <form class="form" action="#" method="POST">
+                <form class="form" action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
                     <div class="form-grid">
                         <div class="col">
                             <h3>Ваш заказ</h3>
@@ -92,7 +92,7 @@
                             </div>
 
                             <label for="phone">Номер телефона</label>
-                            <input type="tel" id="phone" name="phone" pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7 (999) 123-45-67" required>
+                            <input type="tel" id="phone" name="phone" pattern="\+7\s?\(?\d{3}\)?\s?\d{3}-?\d{2}-?\d{2}" placeholder="+7 (999) 123-45-67" required>
 
                             <label for="address">Адрес доставки</label>
                             <input type="text" id="address" name="address" required>
